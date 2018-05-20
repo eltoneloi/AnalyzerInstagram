@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+
+{% block content%}
+<div class="container">
+    <div class="row justify-content-center">
+    {%for item in media%}
+        <div id="{{ item.0 }}" class="card" style="width: 18rem; margin-left:20px;margin-right:20px; margin-bottom:40px">
+            <img class="card-img-top" src="{{item.1}}" alt="Card image cap">
+            <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+            </a>
+            <div class="card-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">#Comentários:{{item.3}}</a>
+                    <a href="#" class="list-group-item list-group-item-action">#Likes:{{item.2}}</a>
+                    <a href="#" class="list-group-item list-group-item-action">Texto:{{item.4}} </a>
+                </div>
+                <a href="#" class="btn btn-primary">Análise com IBM Watson</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock%}
