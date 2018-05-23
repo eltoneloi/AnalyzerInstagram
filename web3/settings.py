@@ -146,13 +146,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 #DEVE-SE ADICIONAR PARA CARREGAR OS ARQUIVOS STATIC DENTRO DA PASTA RAIZ DO PROJETO
 #TAMBEM VAI RECONHECER AO COLOCAR EM PRODUÇÃO COM O SERVIDOR APACHE, BASTA CONFIGURAR O VIRTUALHOST
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    os.path.join(BASE_DIR, "static/"),
+    #'/var/www/static/',
+    
 ]
-
 
 #Adicionado para gerar o diagrama de classes dos Model.
 #Tambem foi adicionado um parametro a lista de apps do projeto "django_extensions"

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-app_authenticate = {'access_token':'',
-                    'user_id':'',
+app_authenticate = {'access_token':'2353444484.8cd1b31.dd3879c710d24dc08b87bfa9720bbce1',
+                    'user_id':'2353444484',
         }
 
 base_uri={'get_user':'https://api.instagram.com/v1/users/self/?access_token='+app_authenticate['access_token'],

@@ -1,10 +1,10 @@
-{% load staticfiles%}
 {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Análise do Instagram</title>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/mdb.css'%}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/style.css'%}">
@@ -36,10 +36,10 @@
     {%endblock%}
     
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
-    <script type="text/javascript" src={% static 'bootstrap.mim.js'%}></script>
-    <script type="text/javascript" src={% static 'mdb.mim.js'%}></script>
-    <script type="text/javascript" src={% static 'popper.mim.js'%}></script>
-    <script type="text/javascript" src={% static 'jquery-3.2.1.mim.js'%}></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.mim.js'%}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/mdb.mim.js'%}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/popper.mim.js'%}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery-3.2.1.mim.js'%}"></script>
     
 </body>
 

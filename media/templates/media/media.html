@@ -11,11 +11,10 @@
                   <div class="mask rgba-white-slight"></div>
             </a>
             <div class="card-body">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">#Comentários: {{item.3}}</a>
-                    <a href="#" class="list-group-item list-group-item-action">#Likes: {{item.2}}</a>
-                    <a href="#" class="list-group-item list-group-item-action">Texto: {{item.4}} </a>
-                    
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">Texto: {{item.4}} </a>
+                    <a class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">#Comentários: <span class="badge badge-primary badge-pill">{{item.3}}</span></a>
+                    <a class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">#Likes: <span class="badge badge-primary badge-pill"> {{item.2}}</span></a>
                 </div>
                 
             </div>
