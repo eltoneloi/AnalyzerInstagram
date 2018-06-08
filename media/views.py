@@ -9,3 +9,6 @@ def index(request):
     media = instagram.agroupFieldsMedia(json_string)
     context = {'media':media}
     return render(request,'media/media.html', context)
+
+def watsonResults(request):
+    return 

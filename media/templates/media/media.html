@@ -19,11 +19,20 @@
                 
             </div>
             <div style="position:relative;margin-left:20px;margin-bottom:20px;margin-right:10px">
-                    <a href="#" class="btn btn-indigo" id="{{ item.0 }}">Análise com IBM Watson</a>
+                    <a class="btn btn-indigo" id="{{ item.0 }}" onclick='getResults("{{ item.0 }}")'>Análise com IBM Watson</a>
             </div>
         </div>
     {% endfor %}
     </div>
 </div>
 
+{% endblock%}
+
+{% block javascript%}
+    <script>
+        function getResults(itemId){
+            $.get(
+                    )
+        }
+    </script>
 {% endblock%}

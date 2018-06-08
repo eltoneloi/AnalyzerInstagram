@@ -96,3 +96,6 @@ class Instagram:
             list_comments.append(i['text'])
         return list_comments
         
+    def mergeComments(self,list_comments):
+        merge = ''.join(list_comments)
+        return merge
