@@ -2,4 +2,4 @@
 
 authenticate = {'username':'substituir',
                 'password':'substituir',
-                'version':'substituir'}
+                'version':'2018-03-16'}

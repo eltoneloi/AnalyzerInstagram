@@ -19,7 +19,8 @@
                 
             </div>
             <div style="position:relative;margin-left:20px;margin-bottom:20px;margin-right:10px">
-                    <a class="btn btn-indigo" id="{{ item.0 }}" onclick='getResults("{{ item.0 }}")'>Análise com IBM Watson</a>
+                    <!--a class="btn btn-indigo" id="{{ item.0 }}" onclick='getResults("{{ item.0 }}")'>Análise com IBM Watson</a-->
+                    <a href="{% url 'result' item.0 %}" target="_blank"class="btn btn-indigo">Análise com IBM Watson</a>
             </div>
         </div>
     {% endfor %}
