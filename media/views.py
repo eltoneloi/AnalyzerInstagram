@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from media.instagramAPIAccess.Instagram import Instagram
 from media.WatsonNaturalLanguage.config import authenticate
-from media.WatsonNaturalLanguage.WatsonAnalyze import Keyword, Entity, WatsonAnalyze
+from media.WatsonNaturalLanguage.WatsonAnalyze import WatsonAnalyze
 from media.instagramAPIAccess.config import base_uri
 # Create your views here.
 

@@ -1,0 +1,120 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <!--Table-->
+<table class="table table-hover">
+
+    <!--Table head-->
+    <thead>
+        <tr>
+            <th>Resultados</th>
+        
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        <tr>
+            <th scope="row">Unidades de texto</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Quantidade de caracteres</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Características</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Características</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Linguagem</th>
+            <td>{}</td>
+        </tr>
+        {%for keyword in keywords%}
+        <thead class="amber lighten-3">
+        <tr >
+            <th scope="row" >Palavra chave</th>
+            <td>{}</td>
+        </tr>
+        </thead>
+        <tr>
+            <th scope="row">Pontuação de sentimento</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Relevancia</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Tristeza</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Alegria</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Medo</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Desgosto</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Raiva</th>
+            <td>{}</td>
+        </tr>
+        {%endfor%}
+        
+        {%for entity in entities%}
+        <thead class="cyan lighten-3">
+        <tr class="cyan lighten-3">
+            <th scope="row" >Entidade</th>
+            <td>{}</td>
+        </tr>
+        </thead>
+        <tr>
+            <th scope="row">Tipo</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Pontuação de sentimento</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Relevancia</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Tristeza</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Alegria</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Medo</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Desgosto</th>
+            <td>{}</td>
+        </tr>
+        <tr>
+            <th scope="row">Raiva</th>
+            <td>{}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+    <!--Table body-->
+
+</table>
+<!--Table-->
+{% endblock %}
