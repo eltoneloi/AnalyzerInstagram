@@ -27,19 +27,24 @@ def watsonResultJson(request):
         
         return JsonResponse(wa_response)
     
-def renderWatsonResult(request):
+def renderWatsonResult(request,media_id):
     if request.method == 'GET':
-        media_id = request.GET['media_id']
         instagram = Instagram(base_uri)
         json_string = instagram.getComments(media_id = media_id)
         list_comments = instagram.getTextComments(json_string)
         merge_comments = instagram.mergeComments(list_comments)
-        wa = WatsonAnalyze(authenticate)
-        wa_response = wa.getResponse(merge_comments)
-        keywords = wa.getKeywordsList(wa_response)
-        entities = wa.getEntityList(wa_response)
-        usage = wa.getDataUsage(wa_response)
-        lang = wa.getLanguage(wa_response)
+        try:
+            wa = WatsonAnalyze(authenticate)
+            wa_response = wa.getResponse(merge_comments)
+            keywords = wa.getKeywordsList(wa_response)
+            entities = wa.getEntityList(wa_response)
+            usage = wa.getDataUsage(wa_response)
+            lang = wa.getLanguage(wa_response)
+        except:
+            context = {'Error': True,
+                       'Message':'Dados não satisfazem os requisitos mínimos'}
+            
+            return render(request,'media/result.html', context)
         
         context = {'keywords':keywords, 
                    'entities': entities,

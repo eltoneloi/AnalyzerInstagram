@@ -70,7 +70,7 @@ class WatsonAnalyze:
                         emotion=True,
                         sentiment=True,
                         limit=2)))
-        json_string = json.loads(response)
+        json_string = json.loads(json.dumps(response))
             
         return json_string
     
@@ -85,7 +85,8 @@ class WatsonAnalyze:
     
     def getKeywordsList(self, watson_response):
         keyword_list = []
-        for key in watson_response['keyword']:
+        print(watson_response['keywords'])
+        for key in watson_response['keywords']:
             keyword_list.append(Keyword(key['text'],
                                         key['sentiment']['score'],
                                         key['relevance'],
@@ -99,6 +100,7 @@ class WatsonAnalyze:
         
     def getEntityList(self, watson_response):
         entity_list = []
+        print(watson_response['entities'])
         for key in watson_response['entities']:
             entity_list.append(Entity(key['type'],
                                       key['text'],

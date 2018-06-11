@@ -21,4 +21,5 @@ from django.urls import path
 from media import views
 urlpatterns = [
     path('', views.index, name='index'),
+    path('result/(?P<media_id>[0-9])', views.renderWatsonResult, name='result'),
 ]
