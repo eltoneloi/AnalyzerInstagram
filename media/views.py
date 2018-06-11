@@ -36,15 +36,15 @@ def renderWatsonResult(request,media_id):
         try:
             wa = WatsonAnalyze(authenticate)
             wa_response = wa.getResponse(merge_comments)
-            keywords = wa.getKeywordsList(wa_response)
-            entities = wa.getEntityList(wa_response)
-            usage = wa.getDataUsage(wa_response)
-            lang = wa.getLanguage(wa_response)
         except:
-            context = {'Error': True,
-                       'Message':'Dados não satisfazem os requisitos mínimos'}
-            
+            context={'Error':'True',
+                     'Message':'Serviço indisponível no momento'}
             return render(request,'media/result.html', context)
+        
+        usage = wa.getDataUsage(wa_response)
+        lang = wa.getLanguage(wa_response)
+        keywords = wa.getKeywordsList(wa_response)
+        entities = wa.getEntityList(wa_response)
         
         context = {'keywords':keywords, 
                    'entities': entities,

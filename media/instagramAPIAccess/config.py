@@ -5,11 +5,16 @@
                     'user_id':'2353444484',
         }'''
 
+#nstagram do Romeu
+app_authenticate = {'access_token':'6119456141.63dea45.3598314acd7c41169d5e6c17e8466e0f',
+                    'user_id':'2353444484',
+        }
+
 
 #Instagram do Lucas
-app_authenticate = {'access_token':'618642185.93c63ab.43a8effd4d7a44bb80e93040904a7fed',
-                    'user_id':'618642185',
-        }
+'''app_authenticate = {'access_token':'618642185.93c63ab.43a8effd4d7a44bb80e93040904a7fed',
+                    'user_id':'6119456141',
+        }'''
 
 base_uri={'get_user':'https://api.instagram.com/v1/users/self/?access_token='+app_authenticate['access_token'],
           'get_media':'https://api.instagram.com/v1/users/self/media/recent/?access_token='+app_authenticate['access_token'],

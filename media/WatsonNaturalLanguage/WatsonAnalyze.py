@@ -85,32 +85,32 @@ class WatsonAnalyze:
     
     def getKeywordsList(self, watson_response):
         keyword_list = []
-        print(watson_response['keywords'])
-        for key in watson_response['keywords']:
-            keyword_list.append(Keyword(key['text'],
-                                        key['sentiment']['score'],
-                                        key['relevance'],
-                                        key['emotion']['sadness'],
-                                        key['emotion']['joy'],
-                                        key['emotion']['fear'],
-                                        key['emotion']['disgust'],
-                                        key['emotion']['anger']
-                                        ))
+        if len(watson_response['keywords']) > 2:
+            for key in watson_response['keywords']:
+                keyword_list.append(Keyword(key['text'],
+                                            key['sentiment']['score'],
+                                            key['relevance'],
+                                            key['emotion']['sadness'],
+                                            key['emotion']['joy'],
+                                            key['emotion']['fear'],
+                                            key['emotion']['disgust'],
+                                            key['emotion']['anger']
+                                            ))
         return keyword_list
         
     def getEntityList(self, watson_response):
         entity_list = []
-        print(watson_response['entities'])
-        for key in watson_response['entities']:
-            entity_list.append(Entity(key['type'],
-                                      key['text'],
-                                      key['sentiment']['score'],
-                                      key['relevance'],
-                                      key['emotion']['sadness'],
-                                      key['emotion']['joy'],
-                                      key['emotion']['fear'],
-                                      key['emotion']['disgust'],
-                                      key['emotion']['anger']
-                                      ))
+        if len(watson_response['entities']) >2:
+            for key in watson_response['entities']:
+                entity_list.append(Entity(key['type'],
+                                          key['text'],
+                                          key['sentiment']['score'],
+                                          key['relevance'],
+                                          key['emotion']['sadness'],
+                                          key['emotion']['joy'],
+                                          key['emotion']['fear'],
+                                          key['emotion']['disgust'],
+                                          key['emotion']['anger']
+                                          ))
         return entity_list
             
