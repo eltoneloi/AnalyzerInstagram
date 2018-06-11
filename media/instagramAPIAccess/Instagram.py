@@ -92,7 +92,6 @@ class Instagram:
     #Transforma os comentarios do json em uma lista de apenas com os textos
     def getTextComments(self,comments_json):
         list_comments = []
-        print(comments_json['data'])
         for i in comments_json['data']:
             list_comments.append(i['text'])
         return list_comments
