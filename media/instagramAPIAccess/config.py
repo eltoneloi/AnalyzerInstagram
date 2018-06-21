@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
 #Instagram do Coxinha
-'''app_authenticate = {'access_token':'2353444484.8cd1b31.dd3879c710d24dc08b87bfa9720bbce1',
-                    'user_id':'2353444484',
-        }'''
-
-#nstagram do Romeu
-app_authenticate = {'access_token':'6119456141.63dea45.3598314acd7c41169d5e6c17e8466e0f',
+app_authenticate = {'access_token':'2353444484.8cd1b31.dd3879c710d24dc08b87bfa9720bbce1',
                     'user_id':'2353444484',
         }
+
+#nstagram do Romeu
+'''app_authenticate = {'access_token':'6119456141.63dea45.3598314acd7c41169d5e6c17e8466e0f',
+                    'user_id':'2353444484',
+        }'''
 
 
 #Instagram do Lucas

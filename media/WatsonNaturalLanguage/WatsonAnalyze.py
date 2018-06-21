@@ -85,7 +85,7 @@ class WatsonAnalyze:
     
     def getKeywordsList(self, watson_response):
         keyword_list = []
-        if len(watson_response['keywords']) > 0:
+        if len(watson_response['keywords'])>0:
             for key in watson_response['keywords']:
                 keyword_list.append(Keyword(key['text'],
                                             key['sentiment']['score'],
@@ -100,7 +100,8 @@ class WatsonAnalyze:
         
     def getEntityList(self, watson_response):
         entity_list = []
-        if len(watson_response['entities']) >0:
+        print(watson_response['entities'])
+        if len(watson_response['entities'])>0:
             for key in watson_response['entities']:
                 entity_list.append(Entity(key['type'],
                                           key['text'],
